@@ -236,8 +236,15 @@ button[type="submit"]:after,
   width: fit-content !important;
   margin-left: auto!important;
 }
+@media screen and (max-width: 767px) {
+  .sqs-block-form.sqs-background-enabled {
+    padding: 50px var(--sqs-mobile-site-gutter) !important;
+  }
+}
 /*Field Title*/
 .sqs-block-form .field-list .title {
+  font-family: var(--inter), var(--body), sans-serif !important;
+  font-feature-settings: var(--inter-features);
   position: relative!important;
   width: fit-content !important;
 }
@@ -248,6 +255,8 @@ button[type="submit"]:after,
 .sqs-block-form radio,
 .sqs-block-form checkbox,
 .sqs-block-form .caption-text {
+  font-family: var(--inter), var(--body), sans-serif !important;
+  font-feature-settings: var(--inter-features);
   transition: var(--trans) !important;
   outline-offset: 3px!important;
   outline: 1px solid transparent;
@@ -260,13 +269,11 @@ button[type="submit"]:after,
 .sqs-block-form .caption-text:focus {
   outline: 1px solid var(--accent);
 }
-/*Text Area Min Height*/
-textarea {
-  min-height: 150px!important;
-}
-/*Replace "reqired" with "*" */
+/*Replace "required" with "*" */
 .form-wrapper .field-list .description.required {
   visibility: hidden;
+  font-family: var(--inter), var(--body), sans-serif !important;
+  font-feature-settings: var(--inter-features);
   font-size: 0!important;
 }
 .form-wrapper .field-list .description.required:after {
