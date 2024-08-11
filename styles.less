@@ -159,27 +159,36 @@ margin-left:auto!important;}
 
 
 //---CONTACT FORM---//
+@media screen and (max-width:767px){
+.sqs-block-form.sqs-background-enabled{
+padding: 50px var(--sqs-mobile-site-gutter)!important;}}
+
 /*Field Title*/
 .sqs-block-form .field-list .title{
+font-family: var(--inter), var(--body), sans-serif!important;
+font-feature-settings:
+var(--inter-features);
 position:relative!important;
 width:fit-content!important;}
 
 /*Field Text / Focus Adjustment*/
 .sqs-block-form{
 input, select, textarea, radio, checkbox, .caption-text{
+font-family: var(--inter), var(--body), sans-serif!important;
+font-feature-settings:
+var(--inter-features);
 transition:var(--trans)!important;
 outline-offset: 3px!important;
 outline:1px solid transparent;
 &:focus{
 outline:1px solid var(--accent);}}}
 
-/*Text Area Min Height*/
-textarea{
-min-height:150px!important;}
-
-/*Replace "reqired" with "*" */
+/*Replace "required" with "*" */
 .form-wrapper .field-list .description.required{
-visibility: hidden;
+visibility: hidden; 
+font-family: var(--inter), var(--body), sans-serif!important;
+font-feature-settings:
+var(--inter-features);
 font-size:0!important;
 &:after{
 visibility: visible; 
