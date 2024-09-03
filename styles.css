@@ -630,6 +630,18 @@ button[type="submit"]:after,
   transform: scale(1.1) !important;
   transition: var(--trans) !important;
 }
+/*Remove underline from active*/
+.header-nav-item--active a,
+body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-item-content {
+  background-image: none!important;
+  text-decoration: none!important;
+  background: none!important;
+}
+/*Add underline to nav hover*/
+.header-nav-item--collection:hover {
+  text-decoration: underline!important;
+  text-underline-offset: 3px;
+}
 .item-pagination[data-collection-type^="portfolio"] {
   padding-top: 2vw;
   padding-bottom: 2vw;
