@@ -666,6 +666,22 @@ align-content:top!important;}
 
 
 //---SITE-WIDE---//
+/*Flex Load Animation*/
+@keyframes flexload{
+0%{
+transform:translateY(30px);
+opacity:0;}
+100%{
+transform:translateY(0px);
+opacity:1;}}
+@-webkit-keyframes flexload{
+0%{
+transform:translateY(20px);
+opacity:0;}
+100%{
+transform:translateY(0px);
+opacity:1;}}
+
 /*Main Icon Class*/
 .sm-icon{
 height:35px;
@@ -678,7 +694,7 @@ padding-left:15px!important;}
 /*Icon Header*/
 .icon-header{
 line-height:1.5;
-font-family:var(--arrows);
+font-family:var(--inter);
 letter-spacing:-.02em;
 font-size:18px;
 font-weight:500;
@@ -710,21 +726,6 @@ margin:10px 0!important;}
 /*Social Buttons*/
 .sqs-block-socialaccountlinks-v2{
 padding-bottom:10px!important;}
-
-/*Code Block*/
-.sqs-block-code{
-padding-top: 17px !important;
-padding-bottom: 17px !important;}
-
-/*Spacer Block*/
-.spacer-block {
-padding-top: 0!important;
-padding-bottom: 0!important;
-line-height: 1px;}
-
-/*Remove underline from active*/
-.header-nav-item--active a, .tweak-global-animations-animation-type-flex .header-nav-item--active:not(.header-nav-item--folder) a::after{
-background:none!important;}
 
 
 
