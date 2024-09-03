@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 10vh!important;
 }
+/*Site Background Color*/
+body {
+  background-color: var(--body-background) !important;
+}
 /*Body Font*/
 .sqsrte-small,
 p,
