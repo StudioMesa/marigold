@@ -148,7 +148,6 @@ button[type="submit"],
 .newsletter-form .newsletter-form-button:after,
 button[type="submit"]:after,
 .lightbox-handle.sqs-button-element--primary:after {
-  display: flex!important;
   content: "→";
   line-height: 0!important;
   margin-left: 4px;
