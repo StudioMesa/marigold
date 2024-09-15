@@ -149,7 +149,7 @@ button[type="submit"],
 button[type="submit"]:after,
 .lightbox-handle.sqs-button-element--primary:after {
   content: "→";
-  line-height: 0!important;
+  margin-bottom: 1px!important;
   margin-left: 4px;
   transform: rotate(0deg);
   transition: transform 0.3s ease;
@@ -241,6 +241,13 @@ button[type="submit"]:after,
   width: fit-content !important;
   margin-left: auto!important;
 }
+/*Shrink Mobile*/
+@media screen and (max-width: 767px) {
+  .sqs-button-element--primary,
+  .sqs-button-element--tertiary {
+    font-size: 0.75rem !important;
+  }
+}
 @media screen and (max-width: 767px) {
   .sqs-block-form.sqs-background-enabled {
     padding: 50px var(--sqs-mobile-site-gutter) !important;
@@ -281,6 +288,13 @@ button[type="submit"]:after,
   font-feature-settings: var(--inter-features);
   color: var(--tweak-form-block-stroke-color) !important;
   opacity: 1!important;
+}
+.sqs-block-form input,
+.sqs-block-form select,
+.sqs-block-form textarea,
+.sqs-block-form radio,
+.sqs-block-form checkbox {
+  border-radius: var(--global-radius) !important;
 }
 /*Replace "reqired" with "*" */
 .form-wrapper .field-list .description.required {
@@ -525,26 +539,16 @@ button[type="submit"]:after,
     text-align: center!important;
   }
 }
-.portfolio-hover[data-horizontal-align="left"][data-mode="hover-cover"] .portfolio-hover-items-list {
-  width: 100%;
-  max-width: var(--sqs-site-max-width) !important;
-  padding: 0!important;
-  margin: 0 auto!important;
-}
-/*Inset Sections Mobile + Tab*/
-@media screen and (max-width: 1300px) {
-  .portfolio-hover[data-horizontal-align="left"][data-mode="hover-cover"] .portfolio-hover-items-list {
-    padding-left: 2vw!important;
-    padding-right: 2vw!important;
-    margin: 2vw auto!important;
+/*Remove default padding mobile*/
+@media screen and (max-width: 767px) {
+  .portfolio-hover-display {
+    padding: unset!important;
   }
 }
 /*Inset Sections Mobile + Tab*/
 @media screen and (max-width: 767px) {
   .portfolio-hover[data-horizontal-align="left"][data-mode="hover-cover"] .portfolio-hover-items-list {
-    padding-left: 6vw!important;
-    padding-right: 6vw!important;
-    margin: 6vw auto!important;
+    padding-left: var(--sqs-mobile-site-gutter);
   }
 }
 /*Masonry Gallery 1 Column Mobile*/
@@ -641,6 +645,11 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
   text-decoration: underline!important;
   text-underline-offset: 3px;
 }
+/*Match main nav to folder*/
+.header-menu-nav-wrapper {
+  display: flex!important;
+  flex-direction: column!important;
+}
 /*Remove Pagination*/
 .item-pagination[data-collection-type^="blog"],
 .item-pagination[data-collection-type^="event"],
@@ -650,7 +659,7 @@ body:not(.header--menu-open) .header-nav-folder-item--active .header-nav-folder-
 /*Accordion Title*/
 .accordion-item__title {
   font-family: var(--inter), var(--body), sans-serif !important;
-  font-weight: var(--bold-weight);
+  font-weight: var(--button-weight);
 }
 /*Accordion Item*/
 .accordion-item {
