@@ -622,10 +622,6 @@ button[type="submit"]:after,
 .list-item-content__description {
   display: none!important;
 }
-/*Make Arrows Container Smaller*/
-.user-items-list-carousel__arrow-button {
-  display: none;
-}
 .user-items-list-carousel__media-inner img {
   transform: scale(1) !important;
   transition: var(--trans) !important;
